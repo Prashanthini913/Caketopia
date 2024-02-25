@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head Section</title>
+</head>
+
+<body>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{% static 'test1/home.jpg' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="400" height="200" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Savor the Sweet Moments: <span
+                        style="font-style: italic;">Elevate Your
+                        Celebrations with Caketopia's Irresistible Confections!</span></h1>
+                <p class="lead">Caketopia, where artistry meets indulgence. Elevate your celebrations with our
+                    meticulously crafted designer cakes, each slice a symphony of flavors and visual delight. From
+                    birthdays to weddings, we turn every occasion into a sweet masterpiece. Indulge in the
+                    extraordinary
+                    at Caketopia – where every bite is a celebration!"</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+                    <a href="{% url 'signUpUser' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-dark btn-lg px-4 me-md-2">Sign Up</button>
+                    </a>
+
+                    <a href="{% url 'loginUser' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-light btn-lg px-4">Login</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

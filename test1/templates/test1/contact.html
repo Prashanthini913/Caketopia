@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Contact</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include "test1/navbar.html" %}
+
+    <div class="container">
+        <h1 class="alert mt-4" style="background-color: darkgoldenrod;">Contact Us</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <h2><em class="text-body-secondary">"Caketopia, where artistry meets indulgence. Elevate
+                        your celebrations with our
+                        meticulously crafted designer cakes. Indulge in the
+                        extraordinary
+                        at Caketopia – where every bite is a celebration!"</em></h2>
+                <br>
+                <h5>E-mail : abc@gmail.com</h5>
+                <h5>Phone : +91 7326109076</h5>
+                <h5>Address : The Leela Palace, New Delhi
+                    Africa Ave, Diplomatic Enclave, Chanakyapuri, New Delhi, Delhi 110023</h5>
+                <h5>Operating Hours : 9 am - 11 pm</h5>
+            </div>
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56039.52209434697!2d77.15593842977975!3d28.615668672235955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d606f974797%3A0xa39df204f5d2d7f7!2sThe%20Leela%20Palace%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1707234047495!5m2!1sen!2sin"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <!-- Query sent message -->
+        {% if success %}
+        <div class="alert alert-success text-center">
+            <h1>{{success}}</h1>
+        </div>
+        {% endif %}
+
+        <div class="container-fluid" style="background-color: darkgoldenrod; padding: 20px;">
+            <h2 class="mt-4 text-center mb-4">Have any queries?</h2>
+            <div class="text-center">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Jane Doe" name="name">
+                        <label for="floatingInput">Your Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            name="email">
+                        <label for="floatingInput">Your Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a query here" id="floatingTextarea"
+                            style="height: 100px;" name="message"></textarea>
+                        <label for="floatingTextarea">Your Query</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <button type="submit" class="btn btn-outline-warning">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Footer -->
+    {% include "test1/footer.html" %}
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

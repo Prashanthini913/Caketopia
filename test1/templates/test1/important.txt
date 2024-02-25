@@ -1,0 +1,4 @@
+superuser credentials
+
+username : prash
+password : Prashu@2003
